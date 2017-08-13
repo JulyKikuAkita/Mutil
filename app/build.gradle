@@ -1,0 +1,19 @@
+apply plugin: 'java'
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+    compile 'org.testng:testng:6.9.6'
+}
+
+test {
+    description = "Runs user acceptance tests"
+
+    useTestNG {
+        suites "src/main/res/testSuite.xml"
+    }
+    testLogging.showStandardStreams = true
+    testLogging {
+        events "started", "passed", "skipped", "failed", "standardOut", "standardError"
+        exceptionFormat "full"
+    }
+}

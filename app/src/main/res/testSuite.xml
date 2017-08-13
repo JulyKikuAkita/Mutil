@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="suite_jql" parallel="methods" thread-count="1">
+    <test name="test-aaf35d2c-f437-4c4c-a49a-3c307197ae74">
+        <classes>
+            <class name="kiku.mutil.TestUtil">
+                <methods>
+                    <!--
+                    <include name="testTrieT9"/>
+                    <include name="testTrieMatchPrefix"/>
+                    -->
+                    <include name="testRedisReadFile"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
